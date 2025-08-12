@@ -143,19 +143,38 @@
 
   <!-- Navbar -->
   <nav class="fixed w-full top-0 z-50 corporate-glass-nav">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
         <div class="w-10 h-10 corporate-gradient-primary rounded-lg flex items-center justify-center">
           <span class="text-white font-bold text-lg">A</span>
         </div>
-        <h1 class="text-2xl font-bold corporate-text-gradient">AKM FACILITIES</h1>
+        <h1 class="text-xl md:text-2xl font-bold corporate-text-gradient">AKM FACILITIES</h1>
       </div>
-      <ul class="flex space-x-8">
+      
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors">
+        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      
+      <!-- Desktop menu -->
+      <ul class="hidden md:flex space-x-8">
         <li><a href="#home" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Utama</a></li>
         <li><a href="#products" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Produk</a></li>
         <li><a href="#about" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Tentang</a></li>
         <li><a href="#contact" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Hubungi</a></li>
       </ul>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 shadow-lg">
+        <ul class="py-4 px-6 space-y-4">
+          <li><a href="#home" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Utama</a></li>
+          <li><a href="#products" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Produk</a></li>
+          <li><a href="#about" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Tentang</a></li>
+          <li><a href="#contact" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Hubungi</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -164,18 +183,18 @@
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
       <div class="corporate-animate-fade-in">
         <div class="inline-block px-4 py-2 bg-amber-500/20 backdrop-blur-sm border border-amber-400/30 rounded-full mb-6">
-          <span class="text-amber-300 font-semibold text-sm">✨ Syarikat Terpercaya Sejak 2023</span>
+          <span class="text-amber-300 font-semibold text-sm">✨ Pembekal Terpercaya Sejak 2023</span>
         </div>
         <h2 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Perkhidmatan <span class="corporate-text-gold">Pembersihan</span><br>
+          Pembekal <span class="corporate-text-gold">Produk Pembersihan</span><br>
           <span class="text-blue-300">Profesional</span>
         </h2>
         <p class="text-xl mb-8 text-blue-100 leading-relaxed max-w-xl">
-          Mengutamakan mutu kerja dan kepuasan pelanggan dengan teknologi pembersihan terkini untuk hasil yang sempurna.
+          Menyediakan produk pembersihan berkualiti tinggi dan peralatan sanitasi untuk keperluan komersial dan industri.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#products" class="corporate-btn-accent text-white py-4 px-8 rounded-xl font-semibold text-lg text-center">
-            Jelajahi Perkhidmatan
+            Lihat Katalog Produk
           </a>
           <a href="#contact" class="border-2 border-white/30 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 text-center">
             Dapatkan Sebut Harga
@@ -194,30 +213,30 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-white font-semibold">Kualiti Terjamin</h4>
-                <p class="text-blue-200 text-sm">Mutu kerja yang konsisten</p>
+                <h4 class="text-white font-semibold">Produk Berkualiti</h4>
+                <p class="text-blue-200 text-sm">Standard industri terjamin</p>
               </div>
             </div>
             <div class="flex items-center space-x-4">
               <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                 </svg>
               </div>
               <div>
-                <h4 class="text-white font-semibold">Pasukan Berpengalaman</h4>
-                <p class="text-blue-200 text-sm">Tenaga kerja terlatih</p>
+                <h4 class="text-white font-semibold">Stok Lengkap</h4>
+                <p class="text-blue-200 text-sm">Inventory komprehensif</p>
               </div>
             </div>
             <div class="flex items-center space-x-4">
               <div class="w-12 h-12 bg-emerald-500 rounded-xl flex items-center justify-center">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
               </div>
               <div>
-                <h4 class="text-white font-semibold">Perkhidmatan 24/7</h4>
-                <p class="text-blue-200 text-sm">Respons pantas</p>
+                <h4 class="text-white font-semibold">Penghantaran Pantas</h4>
+                <p class="text-blue-200 text-sm">Logistik yang cekap</p>
               </div>
             </div>
           </div>
@@ -231,65 +250,64 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
         <div class="inline-block px-4 py-2 bg-blue-100 rounded-full mb-4">
-          <span class="text-blue-700 font-semibold text-sm">PERKHIDMATAN KAMI</span>
+          <span class="text-blue-700 font-semibold text-sm">PRODUK KAMI</span>
         </div>
-        <h3 class="text-4xl lg:text-5xl font-bold mb-4 corporate-text-gradient">Perkhidmatan Premium</h3>
+        <h3 class="text-4xl lg:text-5xl font-bold mb-4 corporate-text-gradient">Produk Pembersihan Premium</h3>
         <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Penyelesaian pembersihan komprehensif untuk keperluan korporat dan komersial
+          Menyediakan rangkaian lengkap produk dan peralatan pembersihan untuk keperluan komersial dan industri
         </p>
       </div>
       
       <div class="grid lg:grid-cols-3 gap-8">
-        <!-- Service Card 1 -->
+        <!-- Product Category 1 -->
         <div class="corporate-card rounded-2xl p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 corporate-gradient-primary rounded-2xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
             </svg>
           </div>
-          <h4 class="font-bold text-xl mb-3 text-slate-800">Pembersihan Bangunan</h4>
+          <h4 class="font-bold text-xl mb-3 text-slate-800">Produk Kimia Pembersihan</h4>
           <p class="text-slate-600 mb-6 leading-relaxed text-sm">
-            Perkhidmatan pembersihan lengkap untuk pejabat, bangunan komersial dan kemudahan awam dengan standard profesional.
+            Deterjen, disinfektan, sanitizer dan bahan kimia pembersihan khusus untuk pelbagai keperluan industri dan komersial.
           </p>
-          <div class="text-xs text-slate-500 mb-4">(Kod: 81291)</div>
+          <div class="text-xs text-slate-500 mb-4">Kategori: Bahan Kimia & Sanitasi</div>
           <a href="product.html" class="corporate-btn-primary text-white py-3 px-6 rounded-lg font-semibold w-full text-sm inline-block">
-            Ketahui Lebih Lanjut
+            Lihat Produk
           </a>
         </div>
 
-        <!-- Service Card 2 -->
+        <!-- Product Category 2 -->
         <div class="corporate-card rounded-2xl p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 corporate-gradient-accent rounded-2xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
             </svg>
           </div>
-          <h4 class="font-bold text-xl mb-3 text-slate-800">Sokongan Kemudahan</h4>
+          <h4 class="font-bold text-xl mb-3 text-slate-800">Peralatan & Mesin</h4>
           <p class="text-slate-600 mb-6 leading-relaxed text-sm">
-            Aktiviti sokongan gabungan pelbagai kemudahan untuk memastikan operasi berjalan lancar dan teratur.
+            Mesin pembersih, vacuum cleaner, polisher dan peralatan pembersihan automatik untuk kegunaan profesional.
           </p>
-          <div class="text-xs text-slate-500 mb-4">(Kod: 81100)</div>
+          <div class="text-xs text-slate-500 mb-4">Kategori: Peralatan & Mekanik</div>
           <button class="corporate-btn-accent text-white py-3 px-6 rounded-lg font-semibold w-full text-sm">
             Dapatkan Sebut Harga
           </button>
         </div>
 
-        <!-- Service Card 3 -->
+        <!-- Product Category 3 -->
         <div class="corporate-card rounded-2xl p-8 text-center group">
           <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-slate-600 to-slate-800 rounded-2xl flex items-center justify-center">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
             </svg>
           </div>
-          <h4 class="font-bold text-xl mb-3 text-slate-800">Perkhidmatan Kejuruteraan</h4>
+          <h4 class="font-bold text-xl mb-3 text-slate-800">Aksesori & Supplies</h4>
           <p class="text-slate-600 mb-6 leading-relaxed text-sm">
-            Solusi kejuruteraan profesional untuk penyelenggaraan dan pembaikan sistem infrastruktur.
+            Berus, mop, sarung tangan, tissue, plastik sampah dan pelbagai aksesori pembersihan untuk keperluan harian.
           </p>
-          <div class="text-xs text-slate-500 mb-4">(Kod: 71102)</div>
-          <button class="corporate-btn-primary text-white py-3 px-6 rounded-lg font-semibold w-full text-sm">
-            Konsultasi Percuma
-          </button>
+          <div class="text-xs text-slate-500 mb-4">Kategori: Aksesori & Consumables</div>
+          <a href="./file/KATALOG AKM FAC LATEST.pdf" download class="corporate-btn-primary text-white py-3 px-6 rounded-lg font-semibold w-full text-sm inline-block text-center">
+            Katalog Lengkap
+          </a>
         </div>
       </div>
     </div>
@@ -301,30 +319,30 @@
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <div class="inline-block px-4 py-2 bg-amber-100 rounded-full mb-6">
-            <span class="text-amber-700 font-semibold text-sm">KOMITMEN KAMI</span>
+            <span class="text-amber-700 font-semibold text-sm">VISI & MISI</span>
           </div>
           <h3 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            <span class="corporate-text-gradient">Komitmen</span> <span class="corporate-text-gold">Kualiti</span>
+            <span class="corporate-text-gradient">Pembekal</span> <span class="corporate-text-gold">Terpercaya</span>
           </h3>
           <div class="space-y-6 text-slate-700 leading-relaxed">
             <p class="text-lg">
-              <span class="font-semibold text-blue-700">Mengutamakan mutu kerja</span>, bahan bekalan dan perkhidmatan agar selaras dengan kehendak dan kepuasan pelanggan serta dapat memberi perkhidmatan yang terbaik kepada pelanggan.
+              <span class="font-semibold text-blue-700">Mengutamakan kualiti produk</span> dan perkhidmatan yang unggul dalam membekalkan produk pembersihan terbaik kepada pelanggan di seluruh Malaysia.
             </p>
             <p>
-              <span class="font-semibold text-amber-600">Mewujudkan suasana</span> yang kemas dan teratur bagi mencapai objektif syarikat dengan fokus kepada kualiti yang unggul.
+              <span class="font-semibold text-amber-600">Menjadi rakan kongsi pilihan</span> untuk keperluan produk pembersihan dengan menawarkan penyelesaian lengkap dan komprehensif.
             </p>
             <p>
-              Mengutamakan <span class="font-semibold text-blue-700">perkhidmatan yang berkualiti</span>, dengan itu pihak syarikat merasakan ini akan mendatangkan saingan yang sihat di dalam memajukan industri ini.
+              Komited untuk <span class="font-semibold text-blue-700">menyediakan produk berkualiti tinggi</span> dengan harga yang kompetitif dan perkhidmatan pelanggan yang cemerlang.
             </p>
             <p class="italic text-slate-600">
-              Secara tidak langsung, kejayaan syarikat dapat <span class="font-semibold text-emerald-600">menjana ekonomi negara</span>.
+              Menyokong <span class="font-semibold text-emerald-600">standard kebersihan dan sanitasi</span> yang optimum di pelbagai sektor industri.
             </p>
           </div>
         </div>
         
         <div class="relative">
           <div class="corporate-card rounded-3xl p-8">
-            <h4 class="text-2xl font-bold text-slate-800 mb-8 text-center">Nilai-Nilai Utama</h4>
+            <h4 class="text-2xl font-bold text-slate-800 mb-8 text-center">Kelebihan Kami</h4>
             <div class="space-y-6">
               <div class="flex items-center space-x-4 p-4 bg-blue-50 rounded-xl">
                 <div class="w-12 h-12 corporate-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
@@ -333,20 +351,20 @@
                   </svg>
                 </div>
                 <div>
-                  <h5 class="font-semibold text-slate-800">Mutu Kerja Terjamin</h5>
-                  <p class="text-slate-600 text-sm">Standard kualiti yang konsisten</p>
+                  <h5 class="font-semibold text-slate-800">Produk Berkualiti Terjamin</h5>
+                  <p class="text-slate-600 text-sm">Standard antarabangsa & sijil halal</p>
                 </div>
               </div>
               
               <div class="flex items-center space-x-4 p-4 bg-amber-50 rounded-xl">
                 <div class="w-12 h-12 corporate-gradient-accent rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                   </svg>
                 </div>
                 <div>
-                  <h5 class="font-semibold text-slate-800">Kepuasan Pelanggan</h5>
-                  <p class="text-slate-600 text-sm">Keutamaan dalam setiap projek</p>
+                  <h5 class="font-semibold text-slate-800">Inventory Lengkap</h5>
+                  <p class="text-slate-600 text-sm">Stok sentiasa tersedia & ready stock</p>
                 </div>
               </div>
               
@@ -357,8 +375,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h5 class="font-semibold text-slate-800">Sumbangan Ekonomi</h5>
-                  <p class="text-slate-600 text-sm">Memajukan industri tempatan</p>
+                  <h5 class="font-semibold text-slate-800">Penghantaran Pantas</h5>
+                  <p class="text-slate-600 text-sm">Logistik cekap ke seluruh Malaysia</p>
                 </div>
               </div>
             </div>
@@ -398,34 +416,34 @@
             </div>
             <div class="flex justify-between items-center py-3">
               <span class="font-medium text-blue-200">Jenis Perniagaan</span>
-              <span class="text-white font-semibold">Sendirian Berhad</span>
+              <span class="text-white font-semibold">Pembekal & Distributor</span>
             </div>
           </div>
         </div>
 
-        <!-- Services List -->
+        <!-- Products List -->
         <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
-          <h4 class="text-2xl font-bold text-white mb-6">Skop Perkhidmatan</h4>
+          <h4 class="text-2xl font-bold text-white mb-6">Kategori Produk</h4>
           <div class="space-y-4">
             <div class="flex items-start space-x-3 p-4 bg-white/5 rounded-xl">
               <div class="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <h5 class="text-amber-400 font-semibold">Pembersihan Bangunan</h5>
-                <p class="text-blue-200 text-sm">Semua jenis bangunan dan pejabat (81291)</p>
+                <h5 class="text-amber-400 font-semibold">Bahan Kimia Pembersihan</h5>
+                <p class="text-blue-200 text-sm">Deterjen, disinfektan & sanitizer</p>
               </div>
             </div>
             <div class="flex items-start space-x-3 p-4 bg-white/5 rounded-xl">
               <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <h5 class="text-blue-400 font-semibold">Sokongan Kemudahan</h5>
-                <p class="text-blue-200 text-sm">Aktiviti sokongan gabungan (81100)</p>
+                <h5 class="text-blue-400 font-semibold">Peralatan & Mesin</h5>
+                <p class="text-blue-200 text-sm">Vacuum, polisher & peralatan automatik</p>
               </div>
             </div>
             <div class="flex items-start space-x-3 p-4 bg-white/5 rounded-xl">
               <div class="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <h5 class="text-emerald-400 font-semibold">Kejuruteraan</h5>
-                <p class="text-blue-200 text-sm">Perkhidmatan kejuruteraan (71102)</p>
+                <h5 class="text-emerald-400 font-semibold">Aksesori & Supplies</h5>
+                <p class="text-blue-200 text-sm">Berus, mop, sarung tangan & lain-lain</p>
               </div>
             </div>
           </div>
@@ -442,21 +460,21 @@
           <span class="text-blue-700 font-semibold text-sm">HUBUNGI KAMI</span>
         </div>
         <h3 class="text-4xl lg:text-5xl font-bold mb-4 corporate-text-gradient">Berhubung Dengan Kami</h3>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Bersedia untuk mengalami perkhidmatan pembersihan profesional?</p>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Dapatkan sebut harga terbaik untuk keperluan produk pembersihan anda</p>
       </div>
       
       <div class="grid lg:grid-cols-2 gap-16">
         <!-- Contact Form -->
         <div class="corporate-card rounded-2xl p-8">
-          <h4 class="text-2xl font-bold text-slate-800 mb-6">Hantar Mesej</h4>
+          <h4 class="text-2xl font-bold text-slate-800 mb-6">Hantar Pertanyaan</h4>
           <form class="space-y-6">
             <div class="grid md:grid-cols-2 gap-4">
               <div>
-                <label class="block text-sm font-medium text-slate-700 mb-2">Nama Penuh</label>
+                <label class="block text-sm font-medium text-slate-700 mb-2">Nama Syarikat</label>
                 <input 
                   type="text" 
                   class="w-full border-2 border-slate-200 rounded-xl p-4 focus:border-blue-500 focus:outline-none transition-all"
-                  placeholder="Masukkan nama anda"
+                  placeholder="Nama syarikat anda"
                   required
                 >
               </div>
@@ -471,23 +489,25 @@
               </div>
             </div>
             <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Subjek</label>
-              <input 
-                type="text" 
-                class="w-full border-2 border-slate-200 rounded-xl p-4 focus:border-blue-500 focus:outline-none transition-all"
-                placeholder="Keperluan perkhidmatan"
-              >
+              <label class="block text-sm font-medium text-slate-700 mb-2">Jenis Produk Diperlukan</label>
+              <select class="w-full border-2 border-slate-200 rounded-xl p-4 focus:border-blue-500 focus:outline-none transition-all">
+                <option value="">Pilih kategori produk</option>
+                <option value="chemicals">Bahan Kimia Pembersihan</option>
+                <option value="equipment">Peralatan & Mesin</option>
+                <option value="accessories">Aksesori & Supplies</option>
+                <option value="all">Semua Kategori</option>
+              </select>
             </div>
             <div>
               <label class="block text-sm font-medium text-slate-700 mb-2">Mesej</label>
               <textarea 
                 class="w-full border-2 border-slate-200 rounded-xl p-4 focus:border-blue-500 focus:outline-none transition-all" 
                 rows="6"
-                placeholder="Terangkan keperluan pembersihan anda..."
+                placeholder="Terangkan keperluan produk pembersihan anda..."
               ></textarea>
             </div>
             <button class="corporate-btn-primary text-white py-4 px-8 rounded-xl font-bold w-full">
-              Hantar Mesej
+              Hantar Pertanyaan
             </button>
           </form>
         </div>
@@ -545,20 +565,20 @@
             <h4 class="text-xl font-bold text-slate-800 mb-4">Mengapa Pilih Kami</h4>
             <div class="grid grid-cols-2 gap-4 text-center">
               <div>
-                <div class="text-2xl font-bold corporate-text-gradient">100%</div>
-                <div class="text-sm text-slate-600">Kepuasan Pelanggan</div>
+                <div class="text-2xl font-bold corporate-text-gradient">500+</div>
+                <div class="text-sm text-slate-600">Jenis Produk</div>
               </div>
               <div>
                 <div class="text-2xl font-bold corporate-text-gold">24/7</div>
-                <div class="text-sm text-slate-600">Perkhidmatan</div>
+                <div class="text-sm text-slate-600">Sokongan</div>
               </div>
               <div>
                 <div class="text-2xl font-bold corporate-text-gradient">2023</div>
                 <div class="text-sm text-slate-600">Tahun Ditubuhkan</div>
               </div>
               <div>
-                <div class="text-2xl font-bold corporate-text-gold">3+</div>
-                <div class="text-sm text-slate-600">Jenis Perkhidmatan</div>
+                <div class="text-2xl font-bold corporate-text-gold">100%</div>
+                <div class="text-sm text-slate-600">Produk Asli</div>
               </div>
             </div>
           </div>
@@ -580,7 +600,7 @@
             <h2 class="text-2xl font-bold">AKM FACILITIES (M) SDN BHD</h2>
           </div>
           <p class="text-blue-200 mb-6 max-w-md leading-relaxed">
-            Syarikat pembersihan profesional yang mengutamakan kualiti dan kepuasan pelanggan dengan perkhidmatan terbaik di Malaysia.
+            Pembekal produk pembersihan terkemuka yang menyediakan rangkaian lengkap produk berkualiti tinggi untuk keperluan komersial dan industri di Malaysia.
           </p>
           <div class="text-sm text-blue-300 space-y-1">
             <p>📄 No. Syarikat: 202301042616 (1536532-U)</p>
@@ -589,14 +609,14 @@
           </div>
         </div>
         
-        <!-- Services -->
+        <!-- Products -->
         <div>
-          <h4 class="text-lg font-bold mb-6">Perkhidmatan Kami</h4>
+          <h4 class="text-lg font-bold mb-6">Kategori Produk</h4>
           <ul class="space-y-3 text-blue-200">
-            <li class="hover:text-white transition-colors cursor-pointer">• Pembersihan Bangunan</li>
-            <li class="hover:text-white transition-colors cursor-pointer">• Sokongan Kemudahan</li>
-            <li class="hover:text-white transition-colors cursor-pointer">• Perkhidmatan Kejuruteraan</li>
-            <li class="hover:text-white transition-colors cursor-pointer">• Penyelenggaraan Pejabat</li>
+            <li class="hover:text-white transition-colors cursor-pointer">• Bahan Kimia Pembersihan</li>
+            <li class="hover:text-white transition-colors cursor-pointer">• Peralatan & Mesin</li>
+            <li class="hover:text-white transition-colors cursor-pointer">• Aksesori & Supplies</li>
+            <li class="hover:text-white transition-colors cursor-pointer">• Produk Sanitasi</li>
           </ul>
         </div>
         
@@ -629,18 +649,43 @@
       <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <div>
           <p class="text-blue-200 mb-2">&copy; 2025 AKM Facilities (M) Sdn Bhd. Hak cipta terpelihara.</p>
-          <p class="text-sm text-blue-300">Mempelopori masa depan perkhidmatan pembersihan profesional di Malaysia</p>
+          <p class="text-sm text-blue-300">Pembekal produk pembersihan terpercaya untuk keperluan industri dan komersial</p>
         </div>
         <div class="mt-4 md:mt-0">
           <div class="flex space-x-6 text-sm text-blue-300">
             <span>Dasar Privasi</span>
             <span>Terma & Syarat</span>
-            <span>Hubungi Kami</span>
+            <span>Katalog Produk</span>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
 
 </body>
 </html>
