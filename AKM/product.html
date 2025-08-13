@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Produk - AKM FACILITIES (M) SDN BHD.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+        --corporate-navy: #0f172a;
+        --corporate-blue: #1e40af;
+        --corporate-light-blue: #3b82f6;
+        --corporate-gold: #f59e0b;
+        --corporate-orange: #ea580c;
+        --corporate-gray: #64748b;
+        --corporate-light-gray: #f8fafc;
+    }
+
+    * {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    .corporate-gradient-primary {
+        background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+    }
+
+    .corporate-gradient-accent {
+        background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+    }
+
+    .corporate-text-gradient {
+        background: linear-gradient(135deg, #1e40af, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .corporate-card {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(30, 64, 175, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .corporate-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+        border-color: rgba(30, 64, 175, 0.2);
+    }
+
+    .corporate-glass-nav {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid rgba(30, 64, 175, 0.1);
+    }
+
+    .corporate-hero-bg {
+        background: linear-gradient(135deg, #0f172a 0%, #1e40af 80%, #3b82f6 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .corporate-hero-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+            radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .product-card {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .product-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+
+    .product-card:hover::before {
+        opacity: 1;
+        animation: shimmer 1s ease;
+    }
+
+    @keyframes shimmer {
+        0% {
+            transform: translateX(-100%) rotate(45deg);
+        }
+
+        100% {
+            transform: translateX(100%) rotate(45deg);
+        }
+    }
+
+    .filter-btn {
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .filter-btn.active {
+        background: linear-gradient(135deg, #1e40af, #3b82f6);
+        color: white;
+        border-color: #1e40af;
+    }
+
+    .filter-btn:hover {
+        border-color: #3b82f6;
+        transform: translateY(-2px);
+    }
+
+    .category-header {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        border-left: 4px solid #3b82f6;
+    }
+
+    .product-image {
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-image {
+        transform: scale(1.05);
+    }
+
+    .badge {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 10;
+    }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800">
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 z-50 corporate-glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 corporate-gradient-primary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">A</span>
+                </div>
+                <h1 class="text-2xl font-bold corporate-text-gradient">AKM FACILITIES</h1>
+            </div>
+            <ul class="flex space-x-8">
+                <li><a href="index.html" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Utama</a></li>
+                <li><a href="#" class="text-blue-600 font-semibold">Katalog Produk</a></li>
+                <li><a href="index.html#about" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Tentang</a></li>
+                <li><a href="index.html#contact" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Hubungi</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="corporate-hero-bg py-20 relative pt-28">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <div class="inline-block px-4 py-2 bg-amber-500/20 backdrop-blur-sm border border-amber-400/30 rounded-full mb-6">
+                    <span class="text-amber-300 font-semibold text-sm">PERALATAN PROFESSIONAL • KUALITI TERJAMIN</span>
+                </div>
+                <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    Katalog <span class="text-amber-400">Produk</span><br>
+                    <span class="text-blue-300">Pembersihan</span>
+                </h1>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    Peralatan dan bekalan pembersihan professional untuk semua keperluan industri dan komersial
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Category Filter -->
+    <section class="py-8 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active px-6 py-3 rounded-xl font-semibold" data-category="all">
+                    Semua Produk
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="mops">
+                    Mop
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="mops_bucket">
+                    Baldi
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="dusters">
+                    Penyapu Habuk
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="brushes">
+                    Berus & Penyapu
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="bottles">
+                    Botol Spray & Bekal
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="bag">
+                    Beg Sampah
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="landscape">
+                    Alat Landskap
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="tisu">
+                    Tisu-tisu
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-xl font-semibold bg-white text-slate-700" data-category="window">
+                    Tingkap
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Mop & Floor Cleaning Category -->
+            <div class="category-section mb-16" data-category="mops">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Mop</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- String Mop Blue -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            POPULAR
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/MOP/AKM-FM01-FULL-BLUE-FULL-COLOUR-ROUND-MOP-300GM.png" width='120' height='160' viewBox='0 0 120 160' %3E%3Cg%3E%3Ccircle cx='60' cy='30' r='15' fill='%233b82f6'/%3E%3Crect x='45' y='15' width='30' height='30' rx='5' fill='%233b82f6'/%3E%3Cg transform='translate(60,45)' %3E%3Cpath d='M-25,0 Q-25,80 -20,120 Q-15,140 0,145 Q15,140 20,120 Q25,80 25,0' fill='%236b7280' opacity='0.8'/%3E%3Cpath d='M-20,10 Q-20,75 -15,110 Q-10,130 0,135 Q10,130 15,110 Q20,75 20,10' fill='%239ca3af' opacity='0.7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="String Mop Blue" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Mop Benang Biru</h3>
+                        <p class="text-slate-600 text-sm mb-4">Mop benang berkualiti tinggi untuk pembersihan lantai umum</p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• Serap air maksimum</p>
+                            <p>• Tahan lama & mudah dicuci</p>
+                            <p>• Berat: 300gm</p>
+                        </div>
+                    </div>
+                    <!-- String Mop Green -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/MOP/AKM-FM01-FULL-GREEN-FULL-COLOUR-ROUND-MOP-300GM.png" width='120' height='160' viewBox='0 0 120 160' %3E%3Cg%3E%3Ccircle cx='60' cy='30' r='15' fill='%2210b981'/%3E%3Crect x='45' y='15' width='30' height='30' rx='5' fill='%2310b981'/%3E%3Cg transform='translate(60,45)' %3E%3Cpath d='M-25,0 Q-25,80 -20,120 Q-15,140 0,145 Q15,140 20,120 Q25,80 25,0' fill='%2316a34a' opacity='0.8'/%3E%3Cpath d='M-20,10 Q-20,75 -15,110 Q-10,130 0,135 Q10,130 15,110 Q20,75 20,10' fill='%2322c55e' opacity='0.7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="String Mop Green" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Mop Benang Hijau</h3>
+                        <p class="text-slate-600 text-sm mb-4">Mop benang premium dengan teknologi anti-bakteria</p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• Serap air maksimum</p>
+                            <p>• Tahan lama & mudah dicuci</p>
+                            <p>• Berat: 300gm</p>
+                        </div>
+                    </div>
+                    <!-- String Mop Pink -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            WARNA KHAS
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/MOP/AKM-FM01-FULL-RED-FULL-COLOUR-ROUND-MOP-300GM.png" width='120' height='160' viewBox='0 0 120 160' %3E%3Cg%3E%3Ccircle cx='60' cy='30' r='15' fill='%23ec4899'/%3E%3Crect x='45' y='15' width='30' height='30' rx='5' fill='%23ec4899'/%3E%3Cg transform='translate(60,45)' %3E%3Cpath d='M-25,0 Q-25,80 -20,120 Q-15,140 0,145 Q15,140 20,120 Q25,80 25,0' fill='%23f472b6' opacity='0.8'/%3E%3Cpath d='M-20,10 Q-20,75 -15,110 Q-10,130 0,135 Q10,130 15,110 Q20,75 20,10' fill='%23fb7185' opacity='0.7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="String Mop Pink" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Mop Benang Pink</h3>
+                        <p class="text-slate-600 text-sm mb-4">Mop benang dengan sistem pengenal warna untuk hygiene</p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• Sistem kod warna</p>
+                            <p>• Berat: 300gm</p>
+                            <p>• Untuk kawasan sensitif</p>
+                        </div>
+                    </div>
+                    <!-- Cotton Mop -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/MOP/AKM-FM01-FULL-WHITE-FULL-COLOUR-ROUND-MOP-300GM.png" width='120' height='160' viewBox='0 0 120 160' %3E%3Cg%3E%3Ccircle cx='60' cy='30' r='15' fill='%23eab308'/%3E%3Crect x='45' y='15' width='30' height='30' rx='5' fill='%23eab308'/%3E%3Cg transform='translate(60,45)' %3E%3Cpath d='M-25,0 Q-25,80 -20,120 Q-15,140 0,145 Q15,140 20,120 Q25,80 25,0' fill='%23f8fafc' opacity='0.9'/%3E%3Cpath d='M-20,10 Q-20,75 -15,110 Q-10,130 0,135 Q10,130 15,110 Q20,75 20,10' fill='%23e2e8f0' opacity='0.8'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Cotton Mop" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Mop Benang Putih</h3>
+                        <p class="text-slate-600 text-sm mb-4">Mop kapas 100% untuk pembersihan delicate surfaces</p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• Serap air maksimum</p>
+                            <p>• Tahan lama & mudah dicuci</p>
+                            <p>• Berat: 300gm</p>
+                        </div>
+                    </div>
+                    <!-- Microfiber Mop -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            ECO-FRIENDLY
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/MOP/AKM-FM01-FULL-YELLOW-FULL-COLOUR-ROUND-MOP-300GM.png" width='120' height='160' viewBox='0 0 120 160' %3E%3Cg%3E%3Ccircle cx='60' cy='30' r='15' fill='%23eab308'/%3E%3Crect x='45' y='15' width='30' height='30' rx='5' fill='%23eab308'/%3E%3Cg transform='translate(60,45)' %3E%3Cpath d='M-25,0 Q-25,80 -20,120 Q-15,140 0,145 Q15,140 20,120 Q25,80 25,0' fill='%23fef3c7' opacity='0.9'/%3E%3Cpath d='M-20,10 Q-20,75 -15,110 Q-10,130 0,135 Q10,130 15,110 Q20,75 20,10' fill='%23fde68a' opacity='0.8'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Microfiber Mop" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Mop Benang Kuning</h3>
+                        <p class="text-slate-600 text-sm mb-4">Mop microfiber dengan teknologi tangkap debu canggih</p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• Teknologi microfiber</p>
+                            <p>• Tangkap debu & kotoran</p>
+                            <p>• Boleh dicuci berulang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mop & Floor Cleaning Category -->
+            <div class="category-section mb-16" data-category="mops_bucket">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Baldi Mop</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- String Mop Blue -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            POPULAR
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/MOPPING BUCKET/AKM-MB04 320(D)x310(H) MM4 GALLON MOP PAIL.png" width='120' height='160' viewBox='0 0 120 160' %3E%3Cg%3E%3Ccircle cx='60' cy='30' r='15' fill='%233b82f6'/%3E%3Crect x='45' y='15' width='30' height='30' rx='5' fill='%233b82f6'/%3E%3Cg transform='translate(60,45)' %3E%3Cpath d='M-25,0 Q-25,80 -20,120 Q-15,140 0,145 Q15,140 20,120 Q25,80 25,0' fill='%236b7280' opacity='0.8'/%3E%3Cpath d='M-20,10 Q-20,75 -15,110 Q-10,130 0,135 Q10,130 15,110 Q20,75 20,10' fill='%239ca3af' opacity='0.7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="String Mop Blue" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">MM4 GALLON MOP PAIL</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 320(D)x310(H) MM4</p>
+                        </div>
+                    </div>
+                    <!-- String Mop Green -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/MOPPING BUCKET/AKM-MB05 340 x340 mm5 GALLON MOP PAIL.png" width='120' height='160' viewBox='0 0 120 160' %3E%3Cg%3E%3Ccircle cx='60' cy='30' r='15' fill='%2210b981'/%3E%3Crect x='45' y='15' width='30' height='30' rx='5' fill='%2310b981'/%3E%3Cg transform='translate(60,45)' %3E%3Cpath d='M-25,0 Q-25,80 -20,120 Q-15,140 0,145 Q15,140 20,120 Q25,80 25,0' fill='%2316a34a' opacity='0.8'/%3E%3Cpath d='M-20,10 Q-20,75 -15,110 Q-10,130 0,135 Q10,130 15,110 Q20,75 20,10' fill='%2322c55e' opacity='0.7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="String Mop Green" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">MM5 GALLON MOP PAIL</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 340 x340 mm5 GALLON</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Brushes & Cleaning Tools Category -->
+            <div class="category-section mb-16" data-category="brushes">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Penyapu & Berus</h2>
+                    <p class="text-slate-600">Koleksi penyapu dan berus untuk pembersihan mendalam</p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- Angle Brooms -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            PILIH WARNA
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BRUSH/AKM-BBS02 440(W)x300(H)mm NYLON PADDY BROOM(LHT).png" width='140' height='120' viewBox='0 0 140 120' %3E%3Cg%3E%3C!-- Yellow Brush --%3E%3Cg transform='translate(20,30)' %3E%3Cpath d='M10,10 L30,10 L35,5 L40,15 L35,25 L30,20 L10,20 Z' fill='%23fbbf24'/%3E%3Cg transform='translate(35,15)' %3E%3Cpath d='M0,0 L50,0 L50,2 L0,2 Z' fill='%23f59e0b'/%3E%3Cpath d='M0,3 L50,3 L50,5 L0,5 Z' fill='%23f59e0b'/%3E%3Cpath d='M0,6 L50,6 L50,8 L0,8 Z' fill='%23f59e0b'/%3E%3C/g%3E%3C/g%3E%3C!-- Pink Brush --%3E%3Cg transform='translate(50,50)' %3E%3Cpath d='M10,10 L30,10 L35,5 L40,15 L35,25 L30,20 L10,20 Z' fill='%23ec4899'/%3E%3Cg transform='translate(35,15)' %3E%3Cpath d='M0,0 L50,0 L50,2 L0,2 Z' fill='%23db2777'/%3E%3Cpath d='M0,3 L50,3 L50,5 L0,5 Z' fill='%23db2777'/%3E%3Cpath d='M0,6 L50,6 L50,8 L0,8 Z' fill='%23db2777'/%3E%3C/g%3E%3C/g%3E%3C!-- Green Brush --%3E%3Cg transform='translate(80,20)' %3E%3Cpath d='M10,10 L30,10 L35,5 L40,15 L35,25 L30,20 L10,20 Z' fill='%2310b981'/%3E%3Cg transform='translate(35,15)' %3E%3Cpath d='M0,0 L50,0 L50,2 L0,2 Z' fill='%23059669'/%3E%3Cpath d='M0,3 L50,3 L50,5 L0,5 Z' fill='%23059669'/%3E%3Cpath d='M0,6 L50,6 L50,8 L0,8 Z' fill='%23059669'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Angle Brooms Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Penyapu Nylon Padi</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 440(W)x300(H)mm</p>
+                        </div>
+                    </div>
+                    <!-- Dustpan Set -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BRUSH/AKM-BBS05 280(W)x220(L)x120(H)mm DUSTAPAN.png" width='120' height='80' viewBox='0 0 120 80' %3E%3Cg%3E%3C!-- Red Dustpan --%3E%3Cpath d='M10,50 Q10,30 20,30 L50,30 Q60,30 60,50 L60,70 Q50,75 20,75 Q10,70 10,50 Z' fill='%23ef4444'/%3E%3Ccircle cx='65' cy='25' r='4' fill='%23dc2626'/%3E%3C!-- Blue Dustpan --%3E%3Cpath d='M70,50 Q70,30 80,30 L110,30 Q120,30 120,50 L120,70 Q110,75 80,75 Q70,70 70,50 Z' fill='%233b82f6'/%3E%3Ccircle cx='125' cy='25' r='4' fill='%232563eb'/%3E%3C/g%3E%3C/svg%3E" alt="Dustpan Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Cenduk Sampah</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 280(W)x220(L)x120(H)mm</p>
+                        </div>
+                    </div>
+                    <!-- Toilet Brush -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BRUSH/AKM-BBS22 400(L)mm TOILET BOWL BRUSH-OVAL.png" width='120' height='80' viewBox='0 0 80 160' %3E%3Cg%3E%3Crect x='35' y='10' width='10' height='100' fill='%236b7280'/%3E%3Cg transform='translate(40,110)' %3E%3Cpath d='M-15,0 Q-15,20 -10,30 Q-5,35 0,35 Q5,35 10,30 Q15,20 15,0' fill='%23fbbf24'/%3E%3Cpath d='M-12,5 Q-12,18 -8,25 Q-4,30 0,30 Q4,30 8,25 Q12,18 12,5' fill='%23f59e0b'/%3E%3Cpath d='M-8,8 Q-8,15 -5,20 Q-2,25 0,25 Q2,25 5,20 Q8,15 8,8' fill='%23d97706'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Toilet Brush" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Berus Mangkuk Jamban</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 400(L)mm</p>
+                        </div>
+                    </div>
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            HEAVY DUTY
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BRUSH/AKM-BBS07 SIZE M 60x150(L)x70(H)mm DECK BRUSH.png" width='120' height='80' viewBox='0 0 120 60' %3E%3Cg%3E%3Crect x='10' y='25' width='100' height='10' fill='%23fbbf24'/%3E%3Cg transform='translate(20,35)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%23ec4899' stroke='%23db2777' stroke-width='1'/%3E%3C/g%3E%3Cg transform='translate(20,20)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%2310b981' stroke='%23059669' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Floor Brush" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Berus Dek</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• SIZE M </p>
+                            <p>• E60x150(L)x70(H)mm</p>
+                        </div>
+                    </div>
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            HEAVY DUTY
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BRUSH/AKM-BBS07 SIZE S 60(W)x110(L)x70(H)mm DECK BRUSH.png" width='120' height='80' viewBox='0 0 120 60' %3E%3Cg%3E%3Crect x='10' y='25' width='100' height='10' fill='%23fbbf24'/%3E%3Cg transform='translate(20,35)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%23ec4899' stroke='%23db2777' stroke-width='1'/%3E%3C/g%3E%3Cg transform='translate(20,20)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%2310b981' stroke='%23059669' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Floor Brush" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Berus Dek</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• SIZE S</p>
+                            <p>• 60(W)x110(L)x70(H)mm</p>
+                        </div>
+                    </div>
+                    <!-- Floor Brush -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            HEAVY DUTY
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BRUSH/AKM-BBS08 50(W)x220(L)x50(H)mm FLOOR BRUSH(L).png" width='120' height='80' viewBox='0 0 120 60' %3E%3Cg%3E%3Crect x='10' y='25' width='100' height='10' fill='%23fbbf24'/%3E%3Cg transform='translate(20,35)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%23ec4899' stroke='%23db2777' stroke-width='1'/%3E%3C/g%3E%3Cg transform='translate(20,20)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%2310b981' stroke='%23059669' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Floor Brush" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Berus Lantai Panjang</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 50(W)x220(L)x50(H)mm</p>
+                        </div>
+                    </div>
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BRUSH/AKM-BBS14 460(W)X14(H)mm16 FLO0R SQUEEGEE BIG(2830).png" width='120' height='80' viewBox='0 0 120 60' %3E%3Cg%3E%3Crect x='10' y='25' width='100' height='10' fill='%23fbbf24'/%3E%3Cg transform='translate(20,35)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%23ec4899' stroke='%23db2777' stroke-width='1'/%3E%3C/g%3E%3Cg transform='translate(20,20)' %3E%3Cpath d='M0,0 L5,15 L10,0 L15,15 L20,0 L25,15 L30,0 L35,15 L40,0 L45,15 L50,0 L55,15 L60,0 L65,15 L70,0 L75,15 L80,0' fill='%2310b981' stroke='%23059669' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Floor Brush" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Penyapu Air</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 460(W)X14(H)mm16</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottles & Containers Category -->
+            <div class="category-section mb-16" data-category="dusters">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Produk siling & penyapu habuk</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- Spray Bottles Set -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            SET LENGKAP
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/CEILING,DUSTER PRUDUCT/AKM-CD01 220(W)x330(L)mm COBWEB BRUSH.png" width='120' height='140' viewBox='0 0 120 140' %3E%3Cg%3E%3C!-- Bottle 1 --%3E%3Crect x='15' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(25,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 2 --%3E%3Crect x='50' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(60,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 3 --%3E%3Crect x='85' y='50' width='20' height='70' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(95,40)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Spray Bottles Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Penyapu Cobweb</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 220(W)x330(L)mm</p>
+                        </div>
+                    </div>
+                    <!-- Chemical Containers -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/CEILING,DUSTER PRUDUCT/AKM-CD04590(L) mm NYLON DUSTER.png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Penyapu Habuk Nylon</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 590(L) mm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottles & Containers Category -->
+            <div class="category-section mb-16" data-category="bottles">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Botol Spray & Bekalan</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- Spray Bottles Set -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="badge bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            SET LENGKAP
+                        </div>
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BOTTLE/AKM-B02-500ML-SPRAY-BOTTLE-(ITALY).png" width='120' height='140' viewBox='0 0 120 140' %3E%3Cg%3E%3C!-- Bottle 1 --%3E%3Crect x='15' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(25,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 2 --%3E%3Crect x='50' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(60,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 3 --%3E%3Crect x='85' y='50' width='20' height='70' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(95,40)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Spray Bottles Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Botol Semburan</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 500ML</p>
+                        </div>
+                    </div>
+                    <!-- Chemical Containers -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BOTTLE/AKM-B05-1L-EMPTY-BOTTLE.png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Bekas Kimia Set</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 1L</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-section mb-16" data-category="bag">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Beg Sampah</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- Spray Bottles Set -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BAG/AKM GB07 XL -32x40(1bdl-30pkt)(BLACK)(THICK).png" width='120' height='140' viewBox='0 0 120 140' %3E%3Cg%3E%3C!-- Bottle 1 --%3E%3Crect x='15' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(25,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 2 --%3E%3Crect x='50' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(60,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 3 --%3E%3Crect x='85' y='50' width='20' height='70' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(95,40)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Spray Bottles Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">BEG SAMPAH HITAM XL (30pkt)</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• XL -32x40 </p>
+                            <p>• 1bdl-30pkt </p>
+                        </div>
+                    </div>
+                    <!-- Chemical Containers -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BAG/AKM GB09 XL -35x 40(1bdl -30pkt x -10pcs )(BLACK) (THICK).png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">BEG SAMPAH HITAM XL (30x10pkt)</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• XL -35x 40</p>
+                            <p>• 1bdl-30pkt x 10pcs</p>
+                        </div>
+                    </div>
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BAG/AKM-GB01 S -47cm x 54cm (1bdl-200pkt x 30pcs ) blue.png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">BEG SAMPAH BIRU S (30x10pkt)</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• S -47cm x 54cm</p>
+                            <p>• 1bdl-200pkt x 30pcs</p>
+                        </div>
+                    </div>
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/BAG/AKM-GB04 L-74cm x90cm (1bdl-180pkt x10PCS)(BLACK).png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">BEG SAMPAH HITAM L (180pktx10PCS)</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• L-74cm x90cm</p>
+                            <p>• 1bdl-180pkt x10PCS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-section mb-16" data-category="landscape">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Alat Pembersihan Landskap</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- Spray Bottles Set -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/LANDSCAPE/AKM LC05900 (L) mm LIDI BROOM.png" width='140' height='140' viewBox='0 0 120 140' %3E%3Cg%3E%3C!-- Bottle 1 --%3E%3Crect x='15' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(25,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 2 --%3E%3Crect x='50' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(60,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 3 --%3E%3Crect x='85' y='50' width='20' height='70' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(95,40)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Spray Bottles Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">(L) mm Penyapu Lidi </h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• (L) mm </p>
+                        </div>
+                    </div>
+                    <!-- Chemical Containers -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/LANDSCAPE/AKM-LC08 350(W)x1000(H)mm VIETNAM PADDY BROOM- (BIG).png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Penyapu Lidi Vietnam</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>•350(W)x1000(H)mm</p>
+                        </div>
+                    </div>
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/LANDSCAPE/AKM-LC11 390(W)x160(H)mm 30M THICK WATER HOSE.png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Hos Air (Tebal)</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• 390(W)x160(H)mm 30M</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-section mb-16" data-category="tissue">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Tisu</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- Spray Bottles Set -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/TISSUE/AKM-T01 TOILET ROLL TISSUE -RECYCLE.png" width='140' height='140' viewBox='0 0 120 140' %3E%3Cg%3E%3C!-- Bottle 1 --%3E%3Crect x='15' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(25,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 2 --%3E%3Crect x='50' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(60,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 3 --%3E%3Crect x='85' y='50' width='20' height='70' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(95,40)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Spray Bottles Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Tisu Tandas (kitar semula) </h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• -</p>
+                        </div>
+                    </div>
+                    <!-- Chemical Containers -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/TISSUE/AKM-T03 JUMB0 ROLL TISSUE -PULP.png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Tisu Gulung Jumbo</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>•-</p>
+                        </div>
+                    </div>
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/TISSUE/AKM-T06 INTERFOLD TISSUE-PULP.png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Tisu PULP</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• -</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-section mb-16" data-category="window">
+                <div class="category-header p-6 rounded-t-2xl mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Tingkap</h2>
+                    <p class="text-slate-600"></p>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <!-- Spray Bottles Set -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/WINDOW/AKM-W01 14 WINDOW WASHER.png" width='140' height='140' viewBox='0 0 120 140' %3E%3Cg%3E%3C!-- Bottle 1 --%3E%3Crect x='15' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(25,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 2 --%3E%3Crect x='50' y='40' width='20' height='80' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(60,30)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C!-- Bottle 3 --%3E%3Crect x='85' y='50' width='20' height='70' rx='3' fill='%23f1f5f9'/%3E%3Cg transform='translate(95,40)' %3E%3Crect x='-8' y='0' width='16' height='15' rx='2' fill='%236b7280'/%3E%3Cpath d='M-6,0 L-3,-8 L3,-8 L6,0' fill='%236b7280'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="Spray Bottles Set" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Pencuci tingkap </h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>• -</p>
+                        </div>
+                    </div>
+                    <!-- Chemical Containers -->
+                    <div class="product-card corporate-card rounded-2xl p-6 text-center">
+                        <div class="w-full h-48 mb-4 flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                            <img src="./images/WINDOW/AKM-W05 10 PLASTIC WINDOW SQUEEGEE.png" width='120' height='100' viewBox='0 0 120 100' %3E%3Cg%3E%3C!-- Container 1 --%3E%3Crect x='10' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='12' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 2 --%3E%3Crect x='45' y='30' width='25' height='50' rx='3' fill='%23f1f5f9'/%3E%3Crect x='47' y='25' width='21' height='8' rx='2' fill='%236b7280'/%3E%3C!-- Container 3 --%3E%3Crect x='80' y='40' width='30' height='40' rx='3' fill='%23f1f5f9'/%3E%3Crect x='82' y='35' width='26' height='8' rx='2' fill='%236b7280'/%3E%3Ccircle cx='95' cy='30' r='3' fill='%236b7280'/%3E%3C/g%3E%3C/svg%3E" alt="Chemical Containers" class="product-image max-h-full max-w-full object-contain">
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-slate-800">Penyapu Air Tingkap</h3>
+                        <p class="text-slate-600 text-sm mb-4"></p>
+                        <div class="space-y-2 text-xs text-slate-500">
+                            <p>•-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Specialized Tools Category -->
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-20 corporate-gradient-primary">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-4 py-2 bg-white/10 rounded-full mb-6">
+                <span class="text-amber-400 font-semibold text-sm">HUBUNGI KAMI SEKARANG</span>
+            </div>
+            <h2 class="text-4xl font-bold text-white mb-6">Berminat dengan Produk Kami?</h2>
+            <p class="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+                Dapatkan sebut harga khusus untuk pembelian borong dan pakej lengkap peralatan pembersihan
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 corporate-gradient-accent rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Telefon</h3>
+                    <p class="text-blue-200">+603-8051 6540</p>
+                    <p class="text-blue-200">+010-252 7166</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 corporate-gradient-accent rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Email</h3>
+                    <p class="text-blue-200">akmfacilities23@gmail.com</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 corporate-gradient-accent rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Lokasi</h3>
+                    <p class="text-blue-200">Puchong, Selangor</p>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+60382516540" class="corporate-btn-accent text-white py-4 px-8 rounded-xl font-semibold text-lg inline-block">
+                    Hubungi Sekarang
+                </a>
+                <a href="mailto:akmfacilities23@gmail.com" class="border-2 border-white/30 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 inline-block">
+                    Hantar Email
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="corporate-gradient-primary text-white py-16 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 corporate-gradient-accent rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">A</span>
+                        </div>
+                        <h2 class="text-2xl font-bold">AKM FACILITIES (M) SDN BHD</h2>
+                    </div>
+                    <p class="text-blue-200 mb-6 max-w-md leading-relaxed">
+                        Pembekal peralatan pembersihan professional dengan kualiti terjamin dan harga kompetitif untuk semua keperluan industri.
+                    </p>
+                    <div class="text-sm text-blue-300 space-y-1">
+                        <p>📄 No. Syarikat: 202301042616 (1536532-U)</p>
+                        <p>📅 Ditubuhkan: 27 Oktober 2023</p>
+                        <p>🏛️ Berdaftar dengan SSM & MOF</p>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Navigasi Pantas</h4>
+                    <ul class="space-y-3 text-blue-200">
+                        <li><a href="index.html" class="hover:text-white transition-colors cursor-pointer">• Halaman Utama</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors cursor-pointer">• Katalog Produk</a></li>
+                        <li><a href="index.html#about" class="hover:text-white transition-colors cursor-pointer">• Tentang Kami</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors cursor-pointer">• Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Hubungi Kami</h4>
+                    <div class="space-y-3 text-blue-200 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <span>📞</span>
+                            <span>+603-8051 6540</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>📱</span>
+                            <span>+010-252 7166</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>✉️</span>
+                            <span>akmfacilities23@gmail.com</span>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <span>📍</span>
+                            <span>No. 58-1, Jalan Mutiara Indah 1/1, Taman Mutiara Indah, 47100 Puchong, Selangor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                    <div>
+                        <p class="text-blue-200 mb-2">&copy; 2025 AKM Facilities (M) Sdn Bhd. Hak cipta terpelihara.</p>
+                        <p class="text-sm text-blue-300">Pembekal peralatan pembersihan professional di Malaysia</p>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <div class="flex space-x-6 text-sm text-blue-300">
+                            <a href="#" class="hover:text-white">Dasar Privasi</a>
+                            <a href="#" class="hover:text-white">Terma & Syarat</a>
+                            <a href="#" class="hover:text-white">Katalog PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Category Filter Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const categorySection = document.querySelectorAll('.category-section');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.classList.add('bg-white', 'text-slate-700');
+                    b.classList.remove('text-white');
+                });
+
+                // Add active class to clicked button
+                this.classList.add('active');
+                this.classList.remove('bg-white', 'text-slate-700');
+                this.classList.add('text-white');
+
+                const category = this.getAttribute('data-category');
+
+                // Show/hide categories based on selection
+                categorySection.forEach(section => {
+                    if (category === 'all') {
+                        section.style.display = 'block';
+                    } else if (section.getAttribute('data-category') === category) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 100) {
+            nav.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            nav.style.boxShadow = '';
+        }
+    });
+
+    // Product card animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe all product cards
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+    });
+
+    // Add click handlers for product cards (future enhancement)
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const productName = this.querySelector('h3').textContent;
+            // Future: Open product detail modal or navigate to detail page
+            console.log('Clicked on product:', productName);
+        });
+    });
+
+    // Search functionality (can be added later)
+    function searchProducts(query) {
+        const products = document.querySelectorAll('.product-card');
+        products.forEach(product => {
+            const title = product.querySelector('h3').textContent.toLowerCase();
+            const description = product.querySelector('p').textContent.toLowerCase();
+
+            if (title.includes(query.toLowerCase()) || description.includes(query.toLowerCase())) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+
+    // Initialize animations
+    setTimeout(() => {
+        document.querySelectorAll('.category-section').forEach((section, index) => {
+            section.style.animationDelay = `${index * 0.2}s`;
+            section.classList.add('fade-in-up');
+        });
+    }, 500);
+    </script>
+    <style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* Product hover effects */
+    .product-card {
+        cursor: pointer;
+    }
+
+    .product-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .product-card:hover .badge {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    /* Category section transitions */
+    .category-section {
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .category-section[style*="display: none"] {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    /* Enhanced mobile responsiveness */
+    @media (max-width: 768px) {
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .category-header h2 {
+            font-size: 1.875rem;
+        }
+
+        .product-card {
+            padding: 1rem;
+        }
+    }
+
+    /* Loading animation for product images */
+    .product-image {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: loading 2s infinite;
+    }
+
+    @keyframes loading {
+        0% {
+            background-position: 200% 0;
+        }
+
+        100% {
+            background-position: -200% 0;
+        }
+    }
+
+    /* Enhanced badge styles */
+    .badge {
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Print styles */
+    @media print {
+
+        .corporate-glass-nav,
+        footer,
+        .filter-btn,
+        .badge {
+            display: none !important;
+        }
+
+        .product-card {
+            border: 1px solid #ccc !important;
+            box-shadow: none !important;
+            break-inside: avoid;
+        }
+    }
+    </style>
+</body>
+
+</html>
