@@ -152,20 +152,37 @@
 
 <body class="bg-white text-slate-800">
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="fixed w-full top-0 z-50 corporate-glass-nav">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 corporate-gradient-primary rounded-lg flex items-center justify-center">
                     <span class="text-white font-bold text-lg">A</span>
                 </div>
-                <h1 class="text-2xl font-bold corporate-text-gradient">AKM FACILITIES</h1>
+                <h1 class="text-xl md:text-2xl font-bold corporate-text-gradient">AKM FACILITIES</h1>
             </div>
-            <ul class="flex space-x-8">
-                <li><a href="index.html" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Utama</a></li>
-                <li><a href="#" class="text-blue-600 font-semibold">Katalog Produk</a></li>
-                <li><a href="index.html#about" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Tentang</a></li>
-                <li><a href="index.html#contact" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Hubungi</a></li>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors">
+                <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Desktop menu -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Utama</a></li>
+                <li><a href="#products" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Produk</a></li>
+                <li><a href="#about" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Tentang</a></li>
+                <li><a href="#contact" class="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300">Hubungi</a></li>
             </ul>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur border-t border-slate-200 shadow-lg">
+                <ul class="py-4 px-6 space-y-4">
+                    <li><a href="#home" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Utama</a></li>
+                    <li><a href="#products" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Produk</a></li>
+                    <li><a href="#about" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Tentang</a></li>
+                    <li><a href="#contact" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors duration-300 py-2">Hubungi</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Hero Section -->
