@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -673,6 +672,135 @@
           </div>
         </div>
       </div>
+
+      <!-- Google Maps Section -->
+      <div class="mt-16">
+        <div class="text-center mb-12">
+          <div class="inline-block px-4 py-2 bg-amber-100 rounded-full mb-4">
+            <span class="text-amber-700 font-semibold text-sm">LOKASI KAMI</span>
+          </div>
+          <h3 class="text-3xl lg:text-4xl font-bold mb-4 corporate-text-gradient">Datang Melawat Pejabat Kami</h3>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">Terletak strategik di Puchong, Selangor untuk kemudahan akses pelanggan</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- Map Container -->
+          <div class="lg:col-span-2">
+            <div class="corporate-card rounded-2xl overflow-hidden">
+              <div class="relative">
+                <div class="w-full h-96 lg:h-[450px] bg-slate-200 rounded-lg flex items-center justify-center relative overflow-hidden">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1368.5917369373285!2d101.63523246088991!3d2.9891707602532454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb48344aa8ae9%3A0x72605f3f9f12f68d!2sAKM%20GROUP%20MAINTENANCE%20SDN%20BHD!5e0!3m2!1sen!2smy!4v1755484276347!5m2!1sen!2smy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <!-- Custom Overlay Marker -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                  <div class="relative">
+                    <div class="w-8 h-8 bg-red-500 rounded-full border-4 border-white shadow-lg animate-pulse"></div>
+                    <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-8 border-transparent border-t-red-500"></div>
+                  </div>
+                </div>
+                
+                <!-- Quick Action Button -->
+                <div class="absolute bottom-4 right-4">
+                  <a href="https://maps.google.com/maps?daddr=58-1,+Jalan+Mutiara+Indah+1/1,+Taman+Mutiara+Indah,+47100+Puchong,+Selangor,+Malaysia" 
+                     target="_blank"
+                     class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                    </svg>
+                    <span>Get Directions</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location Details -->
+          <div class="space-y-6">
+            <!-- Address Card -->
+            <div class="corporate-card rounded-2xl p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800">Alamat Lengkap</h4>
+              </div>
+              <div class="text-slate-600 leading-relaxed">
+                <p class="font-semibold">No. 58-1, Jalan Mutiara Indah 1/1</p>
+                <p>Taman Mutiara Indah</p>
+                <p>47100 Puchong, Selangor</p>
+                <p class="mt-2 text-sm text-blue-600">Malaysia</p>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="corporate-card rounded-2xl p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 corporate-gradient-primary rounded-xl flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800">Waktu Operasi</h4>
+              </div>
+              <div class="space-y-2 text-sm text-slate-600">
+                <div class="flex justify-between">
+                  <span>Isnin - Jumaat</span>
+                  <span class="font-semibold">9:00 AM - 6:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Sabtu</span>
+                  <span class="font-semibold">9:00 AM - 1:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Ahad</span>
+                  <span class="text-red-500 font-semibold">Tutup</span>
+                </div>
+                <div class="mt-3 p-2 bg-blue-50 rounded-lg">
+                  <p class="text-xs text-blue-700">📞 Hubungi kami sebelum datang untuk memastikan ketersediaan produk</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="corporate-card rounded-2xl p-6">
+              <h4 class="text-lg font-bold text-slate-800 mb-4">Navigasi</h4>
+              <div class="space-y-3">
+                <a href="https://maps.google.com/maps?daddr=58-1,+Jalan+Mutiara+Indah+1/1,+Taman+Mutiara+Indah,+47100+Puchong,+Selangor" 
+                   target="_blank" 
+                   class="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors group">
+                  <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-slate-800 group-hover:text-blue-700">Google Maps</div>
+                    <div class="text-xs text-slate-500">Arah ke pejabat kami</div>
+                  </div>
+                </a>
+
+                <a href="https://waze.com/ul?q=No.+58-1,+Jalan+Mutiara+Indah+1/1,+Taman+Mutiara+Indah,+47100+Puchong,+Selangor" 
+                   target="_blank" 
+                   class="flex items-center space-x-3 p-3 bg-emerald-50 rounded-xl hover:bg-emerald-100 transition-colors group">
+                  <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-slate-800 group-hover:text-emerald-700">Waze</div>
+                    <div class="text-xs text-slate-500">Navigasi terpantas</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -750,13 +878,15 @@
       </div>
     </div>
   </footer>
-<a href="https://wa.me/60102527166?text=Salam,%20saya%20berminat%20dengan%20produk%20AKM%20Facilities."
-   class="whatsapp-float" target="_blank">
-  <span class="whatsapp-tooltip">Hubungi Kami di WhatsApp</span>
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.15 1.6 5.95L0 24l6.19-1.6A11.91 11.91 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.95 0-3.84-.5-5.49-1.46l-.39-.22-3.68.95.98-3.59-.25-.37A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10 2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.2-7.73c-.28-.14-1.67-.82-1.93-.91-.26-.1-.45-.14-.64.14-.19.27-.74.91-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.38-1.65-1.54-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.31.42-.46.14-.16.19-.27.28-.45.09-.18.05-.34-.02-.48-.07-.14-.64-1.55-.88-2.12-.23-.56-.47-.49-.64-.5-.16 0-.34-.02-.52-.02-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.99 2.65 1.13 2.83.14.18 1.96 3.13 4.74 4.39.66.29 1.18.46 1.58.59.66.21 1.27.18 1.75.11.53-.08 1.67-.68 1.91-1.33.24-.65.24-1.2.17-1.33-.07-.13-.25-.21-.53-.35z"/>
-  </svg>
-</a>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/60102527166?text=Salam,%20saya%20berminat%20dengan%20produk%20AKM%20Facilities."
+     class="whatsapp-float" target="_blank">
+    <span class="whatsapp-tooltip">Hubungi Kami di WhatsApp</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.15 1.6 5.95L0 24l6.19-1.6A11.91 11.91 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.95 0-3.84-.5-5.49-1.46l-.39-.22-3.68.95.98-3.59-.25-.37A9.93 9.93 0 0 1 2 12c0-5.52 4.48-10 10-10 2.67 0 5.18 1.04 7.07 2.93A9.94 9.94 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.2-7.73c-.28-.14-1.67-.82-1.93-.91-.26-.1-.45-.14-.64.14-.19.27-.74.91-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.38-1.65-1.54-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.31.42-.46.14-.16.19-.27.28-.45.09-.18.05-.34-.02-.48-.07-.14-.64-1.55-.88-2.12-.23-.56-.47-.49-.64-.5-.16 0-.34-.02-.52-.02-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.99 2.65 1.13 2.83.14.18 1.96 3.13 4.74 4.39.66.29 1.18.46 1.58.59.66.21 1.27.18 1.75.11.53-.08 1.67-.68 1.91-1.33.24-.65.24-1.2.17-1.33-.07-.13-.25-.21-.53-.35z"/>
+    </svg>
+  </a>
 
   <script>
     // Mobile menu toggle
