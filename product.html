@@ -860,7 +860,16 @@
             });
         });
     });
+    // Select all nav links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("href"); // e.g. "#products"
 
+          // Always go to the root domain with the hash
+          window.location.href = "/" + targetId;
+        });
+      });
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -1039,6 +1048,11 @@
         }
     }
     </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+    });
+    </script>
     <script>
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
