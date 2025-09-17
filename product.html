@@ -152,7 +152,7 @@
 
 <body class="bg-white text-slate-800">
     <!-- Navbar -->
-    <nav class="fixed w-full top-0 z-50 corporate-glass-nav">
+<nav class="fixed w-full top-0 z-50 corporate-glass-nav">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 corporate-gradient-primary rounded-lg flex items-center justify-center">
@@ -1039,6 +1039,30 @@
         }
     }
     </style>
+    <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking on links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+    </script>
 </body>
 
 </html>
